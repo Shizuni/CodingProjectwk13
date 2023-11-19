@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ae8a7804579bc8f4c938a19a8d7855fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerPreFab: {fileID: 634442616673398487, guid: 61746553df9f82342a3f5b5e801a0758, type: 3}
+  - enemyOnePrefab: {fileID: 7839833371856201445, guid: ee4948ed231b3fa42adea0d7dbd75290, type: 3}
+  - cloudPreFab: {fileID: 1235929150670329398, guid: a4cc91b79241a7c4da89455934a8b521, type: 3}
+  - coin: {instanceID: 0}
+  - sheild: {instanceID: 0}
+  - gameOverSet: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - livesText: {instanceID: 0}
+  - powerupText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
