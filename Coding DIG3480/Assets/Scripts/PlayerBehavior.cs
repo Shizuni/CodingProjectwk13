@@ -19,7 +19,7 @@ public class PlayerBehavior : MonoBehaviour
     public AudioClip powerUpSound;
     public AudioClip powerDownSound;
     private bool betterWeapon;
-    public GameObject sheild;
+    public GameObject shield;
     public GameObject thruster;
     
     
@@ -124,7 +124,7 @@ public class PlayerBehavior : MonoBehaviour
                 gM.GetComponent<GameManager>().LivesChange(lives);
             }
             Destroy(collision.gameObject);
-                break;  
+                break;
             case "Power Up(Clone)":
              // I picked up a Powerup
              AudioSource.PlayClipAtPoint(powerUpSound, transform.position);
@@ -149,13 +149,22 @@ public class PlayerBehavior : MonoBehaviour
              else if (tempInt ==3)
              {
                 //Shield Powerup
-                StartCoroutine("SheildPowerDown");
-                sheild.SetActive(true);
+                shield.SetActive(true);
                 
              }
                 break;
+                case "EnemyOne(Clone)":
+                Debug.Log("EnemeyOne Collision");
+                if (shield.activeSelf)
+                {
+                     // Shield is active, destroy the shield instead of losing a life
+                shield.SetActive(false);
+                AudioSource.PlayClipAtPoint(powerDownSound, transform.position);
+                gM.GetComponent<GameManager>().PowerupChange("No Power Up");
+            }
+            break;
          }
-
+         
     }
 
     IEnumerator SpeedPowerDown ()
@@ -172,14 +181,6 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(4f);
         AudioSource.PlayClipAtPoint(powerDownSound, transform.position);
         betterWeapon = false;
-        gM.GetComponent<GameManager>().PowerupChange("No Power Up");
-    }
-
-    IEnumerator SheildPowerDown ()
-    {
-        yield return new WaitForSeconds(4f);
-        AudioSource.PlayClipAtPoint(powerDownSound, transform.position);
-        sheild.SetActive(false);
         gM.GetComponent<GameManager>().PowerupChange("No Power Up");
     }
 

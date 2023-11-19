@@ -115,7 +115,7 @@ MonoBehaviour:
   healthSound: {fileID: 8300000, guid: 8106f2c2235aae04cab9795a60708c0d, type: 3}
   powerUpSound: {fileID: 8300000, guid: d1d8e993c5434f7498a1362dfd969044, type: 3}
   powerDownSound: {fileID: 8300000, guid: 6d288c84c541dbd4492bb69dc7f36d5e, type: 3}
-  sheild: {fileID: 5374491680521758671}
+  shield: {fileID: 5374491680521758671}
   thruster: {fileID: 2596799565572648088}
 --- !u!50 &155129852246748341
 Rigidbody2D:

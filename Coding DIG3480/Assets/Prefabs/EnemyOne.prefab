@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5381620327110992400}
   m_Layer: 0
   m_Name: EnemyOne
-  m_TagString: Enemy
+  m_TagString: '"Enemy(Clone)"'
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
